@@ -7,6 +7,7 @@ describe('getTimePresentation', () => {
         [113000, '01:53'],
         [713000, '11:53']
       ])('Should create presentation of time for miliseconds', (miliseconds, expected) => {
+          
         expect(utils.getTimePresentation(miliseconds)).toBe(expected);
       });
 });
