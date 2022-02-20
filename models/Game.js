@@ -1,8 +1,8 @@
-exports.Game = class GuessResponse {
+exports.Game = class {
     constructor() {
         this.idSesji = Date.now() + Math.floor(Math.random() * 1000000);
         this.liczbaProb = 0;
         this.czasRozpoczeciaGry = Date.now();
-        this.liczba = Math.floor(Math.random * 100) + 1;
+        this.liczba = Math.floor((Math.random() * 100) + 1);
     }
 }

@@ -5,8 +5,14 @@ exports.sessionVerifier = (req, res, next) => {
         return next();
     }
     const idSesji = req.query.idSesji;
-    if (gameData.some(gameObj => gameObj.idSesji === idSesji)) {
-        req.gameObj = gameObj;
+    if (gameData.currentGames.some((gameObj, index) => {
+        if (gameObj.idSesji = idSesji) {
+            req.query.gameObj = gameObj;
+            req.query.index = index;
+            return true;
+        }
+        return false;
+    })) {
         return next();
     } else {
         return res.status(504).send('Brak autoryzacji, podany identyfikator sesji nie jest zarejestrowany');
