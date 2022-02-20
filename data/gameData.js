@@ -1,0 +1,3 @@
+exports.scores = [];
+
+exports.currentGames = [];

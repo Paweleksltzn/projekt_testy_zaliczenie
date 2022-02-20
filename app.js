@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+const gameRouter = require('./routes/game');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -21,6 +23,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use('/api/auth', authRouter);
+app.use('/api', gameRouter);
 
 app.listen(process.env.PORT || 3000);
