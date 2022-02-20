@@ -6,7 +6,7 @@ exports.sessionVerifier = (req, res, next) => {
     }
     const idSesji = req.query.idSesji;
     if (gameData.currentGames.some((gameObj, index) => {
-        if (gameObj.idSesji = idSesji) {
+        if (gameObj.idSesji == idSesji) {
             req.query.gameObj = gameObj;
             req.query.index = index;
             return true;
