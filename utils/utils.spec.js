@@ -1,6 +1,6 @@
 const utils = require('./utils');
 
-describe("getTimePresentation", () => {
+describe('getTimePresentation', () => {
     test.each([
         [10000, '00:10'],
         [5000, '00:05'],
