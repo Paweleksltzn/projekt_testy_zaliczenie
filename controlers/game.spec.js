@@ -68,4 +68,15 @@ describe('ENDPOINT TESTS', () => {
             done()
         })
     });
+
+    describe('hiscores', () => {
+        it('gets the hiscores endpoint', async done => {
+            const response = await request.get('/api/hiscores')
+          
+            expect(response.status).toEqual(200)
+            expect(response.body.length).toEqual(10)
+            expect(response.body[0].liczbaProb).toEqual(1);
+            done()
+        })
+    });
 });
