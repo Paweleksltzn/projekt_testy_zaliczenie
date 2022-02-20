@@ -23,6 +23,4 @@ app.use((req, res, next) => {
 
 // app.use('/api/auth', authRouter);
 
-let server;
-
 app.listen(process.env.PORT || 3000);
